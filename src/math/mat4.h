@@ -130,7 +130,7 @@ inline Mat4 getRotate(AXIS I, float theta) {
         ans.arr[2][2] = -(zfar + znear) / (zfar - znear);
         ans.arr[2][3] = -2.0f * zfar * znear / (zfar - znear);
         ans.arr[3][2] = -1;
-        ans.arr[4][4] = 0;
+        ans.arr[3][3] = 0;
 
         return ans;
     }

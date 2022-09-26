@@ -1,6 +1,3 @@
-// created by hyq
-// 2022/4/4
-
 #pragma once
 
 #include "vec.h"

@@ -22,6 +22,7 @@ public:
 	Vec<3, T>() { x = y = z = 0; }
 	Vec<3, T>(const Vec<3, T>& v) { x = v.x; y = v.y; z = v.z; }
 	Vec<3, T>(T _x, T _y, T _z) { x = _x; y = _y; z = _z; }
+	T operator [](size_t index) const { return vec[index]; }
 	T& operator [](size_t index) { return vec[index]; }
 	T norm() const { return sqrt(normSquare()); }
 	T normSquare() const { return x * x + y * y + z * z; }

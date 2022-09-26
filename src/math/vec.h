@@ -8,6 +8,7 @@ template <size_t N, typename T>
 class Vec
 {
 	T& operator [](size_t index);
+	T operator [](size_t index) const;
 	T norm() const;
 	T normSquare() const;
 	Vec<N, T>& operator += (T p);

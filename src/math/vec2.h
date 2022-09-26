@@ -23,6 +23,7 @@ public:
 	Vec<2, T>(T _x, T _y) { x = _x; y = _y; }
 
 	T& operator [](size_t index) { return vec[index]; }
+	T operator [](size_t index) const { return vec[index]; }
 	T norm() const { return sqrt(normSquare()); }
 	T normSquare() const { return x * x + y * y; }
 
