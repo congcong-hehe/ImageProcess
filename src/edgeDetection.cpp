@@ -1,6 +1,6 @@
 #include "process.h"
 
-Image sobelEdgeDetection(const Image& src, const double threshold)
+Image sobelEdgeDetection(const Image& src, const float threshold)
 {
 	int width = src.getWidth(), height = src.getHeight();
 
