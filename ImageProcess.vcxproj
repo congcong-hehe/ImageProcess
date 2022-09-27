@@ -148,6 +148,7 @@
     <ClInclude Include="src\math\vec3.h" />
     <ClInclude Include="src\math\vec4.h" />
     <ClInclude Include="src\process.h" />
+    <ClInclude Include="src\ThreadPool.h" />
     <ClInclude Include="src\utility.h" />
   </ItemGroup>
   <ItemGroup>
