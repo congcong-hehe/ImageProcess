@@ -53,6 +53,9 @@ public:
         }
     }
 
+    float getColor(const int u, const int v) const;
+    void setColor(const int u, const int v, float gray) const;
+
     bool init();
 
     int getHeight() const { return height_; }

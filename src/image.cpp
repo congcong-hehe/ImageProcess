@@ -77,3 +77,24 @@ bool Image::write(const std::string& file_path) const {
         return true;
     }
 }
+
+float Image::getColor(const int u, const int v) const {
+    assert(u < height_&& u >= 0);
+    assert(v < width_&& v >= 0);
+
+    static float scale = 1 / 255.0f;
+    int index = u * channels_ * width_ + v * channels_;
+
+    return data_[index] * scale;
+}
+
+void Image::setColor(const int u, const int v, float gray) const
+{
+    assert(u < height_&& u >= 0);
+    assert(v < width_&& v >= 0);
+
+    static float scale = 255.0f;
+    int index = u * channels_ * width_ + v * channels_;
+
+    data_[index] = (unsigned char)(gray * scale);
+}

@@ -152,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\brightnessExtract.cpp" />
+    <ClCompile Include="src\edgeDetection.cpp" />
     <ClCompile Include="src\image.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\gaussianBlur.cpp" />
