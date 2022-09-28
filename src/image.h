@@ -58,6 +58,8 @@ public:
 
     bool init();
 
+    Image resize(int w, int h) const;
+
     int getHeight() const { return height_; }
     int getWidth() const { return width_; }
     int getChannels() const { return channels_; } 

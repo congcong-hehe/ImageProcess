@@ -1,8 +1,10 @@
 #include "image.h"
 #define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
+#include "../third/stb_image.h"
 #define STB_IMAGE_WRITE_IMPLEMENTATION
-#include "stb_image_write.h"
+#include "../third/stb_image_write.h"
+#define STB_IMAGE_RESIZE_IMPLEMENTATION
+#include "../third/std_image_resize.h"
 #include <iostream>
 #include <string>
 
@@ -97,4 +99,14 @@ void Image::setColor(const int u, const int v, float gray) const
     int index = u * channels_ * width_ + v * channels_;
 
     data_[index] = (unsigned char)(gray * scale);
+}
+
+Image Image::resize(int w, int h) const
+{
+    Image ans(w, h, channels_);
+    if (data_ != nullptr)
+    {
+        stbir_resize_uint8(data_, width_, height_, 0, ans.data_, w, h, 0, channels_);
+    }
+    return ans;
 }
